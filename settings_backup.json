@@ -1,0 +1,215 @@
+{
+  "slash_commands": {
+    "docs": {
+      "enabled": true
+    },
+    "project": {
+      "enabled": true
+    }
+  },
+
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
+  "buffer_font_family": "Monaco",
+  "theme": "One Dark",
+
+  "language_models": {
+    "openai": {
+      "version": "1",
+      "api_url": "https://api.groq.com/openai/v1",
+      "low_speed_timeout_in_seconds": 600,
+      "available_models": [
+        {
+          "name": "llama-3.1-8b-instant",
+          "max_tokens": 10000
+        },
+        {
+          "name": "llama-3.1-70b-versatile",
+          "max_tokens": 32000
+        },
+        {
+          "name": "gemma2-9b-it",
+          "max_tokens": 6000
+        }
+      ]
+    }
+  },
+
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff", "!pylsp", "python-refactoring", "!pyright"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  },
+
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    }
+  },
+
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+
+  "show_inline_completions": true,
+
+  "terminal": {
+    "dock": "bottom",
+    "font_family": "MesloLGS NF"
+  },
+
+  "show_wrap_guides": true,
+  "wrap_guides": [88],
+
+  "soft_wrap": "preferred_line_length",
+  "preferred_line_length": 88,
+
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment": {
+        "color": "#586e75",
+        "font_style": "oblique"
+      },
+      "string.doc": {
+        "color": "#6a6a6a",
+        "font_style": "oblique"
+      }
+    }
+  },
+
+  "project_panel": {
+    "button": true,
+    "default_width": 240,
+    "dock": "left",
+    "file_icons": true,
+    "folder_icons": false
+  },
+
+  "base_keymap": "JetBrains",
+
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+
+  "buffer_font_size": 20.0,
+
+  "autosave": {
+    "after_delay": { "milliseconds": 500 }
+  },
+
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+
+  "vim": {
+    "enabled": true,
+    "use_system_clipboard": "always",
+    "cursor_style": "block",
+    "relative_line_numbers": true,
+    "insert_mode_keybindings": [
+      {
+        "keys": ["j", "k"],
+        "command": "vim.exit_insert_mode"
+      }
+    ],
+    "leader_key": "\\",
+    "keybindings": [
+      {
+        "keys": ["\\", "w"],
+        "command": "workbench.save"
+      },
+      {
+        "keys": ["\\", "q"],
+        "command": "workbench.close_active_editor"
+      },
+      {
+        "keys": ["\\", "f"],
+        "command": "workbench.action.findInFiles"
+      },
+      {
+        "keys": ["\\", "b"],
+        "command": "workbench.view.explorer"
+      },
+      {
+        "keys": ["\\", "t"],
+        "command": "workbench.action.terminal.toggleTerminal"
+      },
+      {
+        "keys": ["\\", "g"],
+        "command": "workbench.action.showAllSymbols"
+      }
+    ],
+    "actions": {
+      "normal_mode": [
+        {
+          "keys": ["g", "d"],
+          "command": "editor.action.goToDeclaration"
+        },
+        {
+          "keys": ["g", "h"],
+          "command": "editor.action.showHover"
+        },
+        {
+          "keys": ["g", "r"],
+          "command": "editor.action.goToReferences"
+        },
+        {
+          "keys": ["g", "t"],
+          "command": "editor.action.goToTypeDefinition"
+        },
+        {
+          "keys": ["g", "i"],
+          "command": "editor.action.goToImplementation"
+        },
+        {
+          "keys": ["g", "s"],
+          "command": "editor.action.rename"
+        },
+        {
+          "keys": ["g", "c"],
+          "command": "editor.action.commentLine"
+        }
+      ],
+      "visual_mode": [
+        {
+          "keys": ["y"],
+          "command": "editor.action.clipboardCopyAction"
+        },
+        {
+          "keys": ["d"],
+          "command": "editor.action.clipboardCutAction"
+        },
+        {
+          "keys": ["p"],
+          "command": "editor.action.clipboardPasteAction"
+        }
+      ]
+    }
+  }
+}

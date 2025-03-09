@@ -1,0 +1,69 @@
+{
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
+  "theme": "Ayu Mirage",
+  "base_keymap": "VSCode",
+  "buffer_font_family": "BerkeleyMono Nerd Font",
+  "buffer_font_size": 15,
+  "vim_mode": false,
+  "relative_line_numbers": true,
+  "cursor_blink": false,
+  "scrollbar": {
+    "show": "never"
+  },
+  "buffer_line_height": {
+    "custom": 1.7
+  },
+  "terminal": {
+    "font_family": "BerkeleyMono Nerd Font",
+    "font_size": 15,
+    "line_height": {
+      "custom": 1.7
+    }
+  },
+  "inlay_hints": {
+    "enabled": false
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 500
+    }
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "gofumpt": true,
+        "usePlaceholders": true,
+        "staticcheck": true,
+        "codelenses": {
+          "gc_details": true,
+          "generate": true,
+          "regenerate_cgo": true,
+          "tidy": true,
+          "upgrade_dependency": true,
+          "vendor": true
+        },
+        "analysis": {
+          "completeUnimported": true,
+          "staticcheck": true,
+          "unusedParams": true,
+          "unusedWrite": true
+        },
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    }
+  }
+}
